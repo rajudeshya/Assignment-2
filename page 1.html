@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Languages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        .section-title {
+            font-size: 20px;
+            margin: 20px 0 10px;
+            font-weight: bold;
+        }
+        .language-list, .top-speakers, .saved-sessions {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+        }
+        .language-item, .speaker-item, .session-item {
+            flex: 0 0 auto;
+            padding: 15px;
+            background-color: #eee;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .language-item {
+            width: 100px;
+        }
+        .language-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .language-item span {
+            display: block;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        .speaker-item img, .session-item img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .speaker-item p, .session-item p {
+            margin: 5px 0 0;
+        }
+        .subtitle {
+            color: gray;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Explore Languages</h1>
+        <input type="text" id="searchBar" class="search-bar" placeholder="Search languages or speakers" onkeyup="filterLanguages()">
+
+        <div>
+            <div class="section-title">Popular Languages</div>
+            <div class="language-list" id="languageList">
+                <div class="language-item">
+                    <img src="https://images.unsplash.com/photo-1570819171769-9d7c5e0d5e74" alt="Spanish">
+                    <span>Spanish</span>
+                </div>
+                <div class="language-item">
+                    <img src="https://images.unsplash.com/photo-1589394814033-58b23c74f516" alt="French">
+                    <span>French</span>
+                </div>
+                <div class="language-item">
+                    <img src="https://images.unsplash.com/photo-1564518098555-cc2aef1398d2" alt="Mandarin">
+                    <span>Mandarin</span>
+                </div>
+                <div class="language-item">
+                    <img src="https://images.unsplash.com/photo-1572084894573-0245c831b5f5" alt="German">
+                    <span>German</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="section-title">Top Speakers</div>
+            <div class="top-speakers">
+                <div class="speaker-item">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Maria Gonzalez">
+                    <p>Maria Gonzalez</p>
+                    <p class="subtitle">Spanish Expert</p>
+                </div>
+                <div class="speaker-item">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" alt="Pierre Dupont">
+                    <p>Pierre Dupont</p>
+                    <p class="subtitle">French Enthusiast</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="section-title">Saved Sessions</div>
+            <div class="saved-sessions">
+                <div class="session-item">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Spanish Basics">
+                    <p>Spanish Basics</p>
+                    <p class="subtitle">Session with Maria</p>
+                </div>
+                <div class="session-item">
+                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="French Conversation">
+                    <p>French Conversation</p>
+                    <p class="subtitle">Session with Pierre</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterLanguages() {
+            const input = document.getElementById('searchBar');
+            const filter = input.value.toLowerCase();
+            const languageItems = document.querySelectorAll('.language-item');
+
+            languageItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

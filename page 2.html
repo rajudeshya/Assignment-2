@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Gonzalez - Spanish Expert</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            position: relative;
+            height: 250px;
+            background-image: url('Maria 1.png');
+            background-size: cover;
+            background-position: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .header-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+        }
+        .header-text h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header-text p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .sessions {
+            margin-top: 20px;
+        }
+        .session-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .session-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #6a5acd;
+            color: #fff;
+        }
+        .btn-secondary {
+            background-color: #eae6ff;
+            color: #6a5acd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-text">
+            <h1>Maria Gonzalez</h1>
+            <p>Spanish Expert</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>About Maria</h2>
+        <div class="profile">
+            <img src="Maria 1.png" alt="Maria Gonzalez">
+            <div>
+                <h3>Maria Gonzalez</h3>
+                <p style="color: #a9a9a9;">Spanish Expert</p>
+            </div>
+        </div>
+
+        <h2>Available Sessions</h2>
+        <div class="sessions">
+            <div class="session-card">
+                <img src="Maria 1.png" alt="Beginner Spanish">
+                <h3>Beginner Spanish</h3>
+                <p style="color: #a9a9a9;">30 mins session</p>
+            </div>
+            <div class="session-card">
+                <img src="Maria 1.png" alt="Intermediate Spanish">
+                <h3>Intermediate Spanish</h3>
+                <p style="color: #a9a9a9;">45 mins session</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-primary">Book</button>
+            <button class="btn btn-secondary">Message</button>
+        </div>
+    </div>
+
+</body>
+</html>
